@@ -54,12 +54,11 @@
             <!-- Texto da Seção Home -->
             <article id="home_texto" class="flex home_content">
 
-                <h4>Bem-vindo ao Novo Universo</h4>
-                <h1>Mundos diferentes para pessoas diferentes</h1>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam ipsum eum sapiente maiores adipisci
-                    aperiam sint dignissimos molestias voluptas expedita doloribus consequatur saepe maxime, tempore
-                    modi eligendi, eius, eos itaque.</p>
-                <a href="https://github.com/rafaelq80" target="_blank" class="botao">
+                <h4>Bem-vindo ao meu Universo Criativo</h4>
+                <h1>Transformando Ideias em Realidade</h1>
+                <p>Com cada linha de código e design, estou construindo o futuro de experiências digitais.
+                    Não apenas desenvolvo, mas crio soluções inovadoras que fazem a diferença.Venha ver o que posso fazer por você e pelo seu projeto.</p>
+                <a href="https://github.com/EliseuZeu" target="_blank" class="botao">
                     Explorar
                 </a>
 
@@ -67,7 +66,12 @@
 
             <!-- Imagem da Seção Home -->
             <article id="home_imagem" class="flex home_content">
-                <img src="./assets/img/astronauta.svg" alt="Capacete de Astronauta Animado">
+                <div class="card">
+                    <div class="wrapper">
+                        <img src="https://ik.imagekit.io/sdkyquy76/CARD%203D/LOBO%20COMPLETO.svg?updatedAt=1739374218357" class="cover-image" />
+                    </div>
+                    <img src="https://ik.imagekit.io/sdkyquy76/CARD%203D/LOBO.svg?updatedAt=1739373911179" class="character" />
+                </div>
             </article>
 
         </section>
@@ -75,54 +79,34 @@
         <!-- Seção sobre -->
         <section id="about" class="flex sobre_container">
 
-            <!-- Imagem da Seção Sobre -->
-            <img src="./assets/img/user_01.svg" alt="Foto do Perfil do Github">
-
-            <!-- Texto da Seção Sobre -->
-            <article id="about_texto">
-                <h2>Sobre mim</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. In nihil magni doloremque sint, qui facere
-                    fugit sequi optio molestiae sunt! Maiores sapiente atque nulla mollitia earum delectus nostrum natus
-                    architecto?</p>
-
-                <!-- Detalhes do Github -->
-                <div id="about_github" class="flex sobre_github">
-                    <a href="https://github.com/EliseuZeu" target="_blank" class="botao">
-                        Github
-                    </a>
-                    <p>200 Seguidores</p>
-                    <p>20 Repositórios</p>
-                </div>
-
-            </article>
         </section>
 
         <!-- Seção de Contato -->
-
         <section id="contact" class="contato_container">
 
             <article id="redes_sociais" class="contato_content">
                 <h4>Contate-me</h4>
-                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptatum quae voluptas error omnis,
-                    deleniti molestiae dolores earum incidunt sint minus magni sunt maiores minima, cumque quam numquam
-                    officia obcaecati perspiciatis.</p>
+                <p>Estou disponível para novos projetos e colaborações. Entre em contato através das minhas redes sociais ou envie uma mensagem diretamente pelo formulário abaixo.</p>
 
                 <!-- Redes Sociais -->
                 <div id="icones_redes_sociais" class="social_container">
-                    <a href="" target="_blank">
+                    <a href="https://www.linkedin.com/in/eliseu-souza" target="_blank">
                         <img src="./assets/img/linkedin.svg" alt="Logo do LinkedIn" class="social_icon">
                     </a>
-                    <a href="" target="_blank">
+                    <a href="https://github.com/EliseuZeu" target="_blank">
                         <img src="./assets/img/github.svg" alt="Logo do Github" class="social_icon">
                     </a>
-                    <a href="" target="_blank">
+                    <a href="https://www.instagram.com/eliseu.souza" target="_blank">
                         <img src="./assets/img/instagram.svg" alt="Logo do Instagram" class="social_icon">
                     </a>
                 </div>
             </article>
 
             <!-- Formulário de Contato -->
-            <form action="" method="POST">
+            <form action="https://formsubmit.co/7065d88cfa92a310a1da3b7a5effb0c9" method="POST" id="formulario">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/sucess.html">
+                <input type="hidden" name="_captcha" value="false">
 
                 <label for="nome">Nome</label>
                 <input id="nome" type="text" name="nome" placeholder="Digite o seu nome">
@@ -144,13 +128,16 @@
 
         </section>
 
-
     </main>
 
     <!-- Rodapé da Página -->
     <footer>
-        Feito com 🧡 por Eliseu Souza - 2025
+        Feito com 🧡 por Eliseu souza - 2025
     </footer>
+
+    <!-- Script JavaScript -->
+    <script src="./assets/scripts/script.js"></script>
+
 </body>
 
 </html>

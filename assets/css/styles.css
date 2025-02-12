@@ -30,6 +30,9 @@
     --black-800: #171717;
 
     --white: #F9F9F9;
+
+    --card-height: 400px; /* Aumente a altura do card */
+    --card-width: calc(var(--card-height) / 1.5); /* Aumente a largura do card proporcionalmente */
 }
 
 /* Configurações padrões da página 
@@ -235,7 +238,7 @@ h4 {
 
 /* Estilização da Seção Contact */
 
-.contato_container{
+.contato_container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     justify-content: center;
@@ -246,50 +249,43 @@ h4 {
     padding: 0 2rem;
 }
 
-.contato_container h4{
+.contato_container h4 {
     margin: 1rem 0;
     font-size: 2rem;
     font-weight: 700;
 }
 
-.contato_content{
+.contato_content {
     flex-direction: column;
     margin: 4rem 0 0 0;
     font-size: 1.25rem;
 }
 
-.contato_content p{
+.contato_content p {
     display: block;
     text-align: justify;
 }
 
 /* Estilização da Seção Redes Sociais*/
 
-.social_container{
-    display:flex;
+.social_container {
+    display: flex;
     justify-content: space-evenly;
     margin: 2rem 0 0 0;
 }
 
-.social_icon{
+.social_icon {
     width: 4.75rem;
     height: 4.75rem;
 }
 
-.social_icon:hover{
-    filter: brightness(0) 
-            saturate(100%) 
-            invert(20%) 
-            sepia(24%) 
-            saturate(4557%) 
-            hue-rotate(242deg) 
-            brightness(89%) 
-            contrast(108%);
+.social_icon:hover {
+    filter: brightness(0) saturate(100%) invert(20%) sepia(24%) saturate(4557%) hue-rotate(242deg) brightness(89%) contrast(108%);
 }
 
 /* Estilização da Seção Form*/
 
-form{
+form {
     display: flex;
     flex-direction: column;
     margin: 7rem 0 0 0;
@@ -297,13 +293,13 @@ form{
     border: none;
 }
 
-form label{
+form label {
     font-size: 1.25rem;
     text-align: left;
 }
 
 form input,
-textarea{
+textarea {
     width: 100%;
     margin: 0.5rem 0 1rem;
     padding: 0.5rem;
@@ -312,11 +308,11 @@ textarea{
     font-size: 1rem;
 }
 
-textarea{
+textarea {
     resize: none;
 }
 
-form span{
+form span {
     margin-bottom: 0.5rem;
     margin-left: 0.75rem;
     font-size: 0.75rem;
@@ -334,6 +330,100 @@ footer {
     color: var(--white);
     background-color: var(--purple-500);
     filter: opacity(0.9);
+}
+
+/* Estilos do Card 3D */
+
+.card {
+    width: var(--card-width);
+    height: var(--card-height);
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 0 36px;
+    perspective: 2500px;
+    margin: 0 50px;
+}
+
+.cover-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrapper {
+    transition: all 0.5s;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.card:hover .wrapper {
+    transform: perspective(900px) translateY(-5%) rotateX(25deg) translateZ(0);
+    box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 2px 35px 32px -8px rgba(0, 0, 0, 0.75);
+}
+
+.wrapper::before,
+.wrapper::after {
+    content: "";
+    opacity: 0;
+    width: 100%;
+    height: 80px;
+    transition: all 0.5s;
+    position: absolute;
+    left: 0;
+}
+.wrapper::before {
+    top: 0;
+    height: 100%;
+    background-image: linear-gradient(
+        to top,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+.wrapper::after {
+    bottom: 0;
+    opacity: 1;
+    background-image: linear-gradient(
+        to bottom,
+        transparent 46%,
+        rgba(12, 13, 19, 0.5) 68%,
+        rgba(12, 13, 19) 97%
+    );
+}
+
+.card:hover .wrapper::before,
+.wrapper::after {
+    opacity: 1;
+}
+
+.card:hover .wrapper::after {
+    height: 120px;
+}
+.title {
+    width: 100%;
+    transition: transform 0.5s;
+}
+.card:hover .title {
+    transform: translate3d(0%, -50px, 100px);
+}
+
+.character {
+    width: 100%;
+    opacity: 0;
+    transition: all 0.5s;
+    position: absolute;
+    z-index: -1;
+}
+
+.card:hover .character {
+    opacity: 1;
+    transform: translate3d(0%, -30%, 100px);
 }
 
 /* Modo Responsivo */
